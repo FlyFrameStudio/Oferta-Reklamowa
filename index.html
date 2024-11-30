@@ -17,12 +17,19 @@
             display: none;
             width: 100%;
             height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        iframe {
+            max-width: 90%;
+            max-height: 90%;
         }
     </style>
     <script>
         function showProduct(productId) {
             document.querySelectorAll('div[id^="produkt"]').forEach(div => div.style.display = 'none');
-            document.getElementById(productId).style.display = 'block';
+            document.getElementById(productId).style.display = 'flex';
         }
     </script>
 </head>
@@ -47,4 +54,5 @@
     </div>
 </body>
 </html>
+
 
