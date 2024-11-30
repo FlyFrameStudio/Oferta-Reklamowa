@@ -13,11 +13,6 @@
             min-height: 100vh;
             margin: 0;
         }
-        #product-list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
         #produkt1, #produkt2, #produkt3 {
             display: none;
             width: 100%;
@@ -35,35 +30,27 @@
         function showProduct(productId) {
             document.querySelectorAll('div[id^="produkt"]').forEach(div => div.style.display = 'none');
             document.getElementById(productId).style.display = 'flex';
-            document.getElementById('title').style.display = 'none';
-            document.getElementById('product-list').style.display = 'none';
         }
     </script>
 </head>
 <body>
-    <div id="title">
-        <h1>STRONA TYTUŁOWA</h1>
-    </div>
-    <div id="product-list">
-        <ul>
-            <li><a href="#" onclick="showProduct('produkt1')">produkt 1</a></li>
-            <li><a href="#" onclick="showProduct('produkt2')">produkt 2</a></li>
-            <li><a href="#" onclick="showProduct('produkt3')">produkt 3</a></li>
-        </ul>
-    </div>
+    <h1>STRONA TYTUŁOWA</h1>
+    <ul>
+        <li><a href="#" onclick="showProduct('produkt1')">produkt 1</a></li>
+        <li><a href="#" onclick="showProduct('produkt2')">produkt 2</a></li>
+        <li><a href="#" onclick="showProduct('produkt3')">produkt 3</a></li>
+    </ul>
 
     <div id="produkt1">
-        <iframe width="1000" height="1000" src="https://www.youtube.com/embed/6iT27FUDnAg?si=wHSNp8PemHgxyjaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6iT27FUDnAg?si=wHSNp8PemHgxyjaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
     <div id="produkt2">
-        <iframe width="1000" height="1000" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" src="https://kuula.co/share/hLKpt?logo=1&info=1&fs=1&vr=0&zoom=1&thumbs=1&inst=0"></iframe>
+        <iframe width="100%" height="100%" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" src="https://kuula.co/share/hLKpt?logo=1&info=1&fs=1&vr=0&zoom=1&thumbs=1&inst=0"></iframe>
     </div>
 
     <div id="produkt3">
-        <iframe src="https://app.vectary.com/p/7GvUmIfX2flcTFcSKQbW20" frameborder="0" width="1000" height="1000" allow="xr-spatial-tracking; fullscreen;"></iframe>
+        <iframe src="https://app.vectary.com/p/7GvUmIfX2flcTFcSKQbW20" frameborder="0" width="100%" height="100%" allow="xr-spatial-tracking; fullscreen;"></iframe>
     </div>
 </body>
 </html>
-
-
