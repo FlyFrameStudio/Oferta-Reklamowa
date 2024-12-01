@@ -12,7 +12,6 @@
             justify-content: flex-start;
             min-height: 100vh;
             margin: 0;
-            background-image: url('tło strony.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -44,8 +43,20 @@
         }
         function showMain() {
             document.querySelectorAll('div[id^="produkt"]').forEach(div => div.style.display = 'none');
-            document.body.style.backgroundImage = 'url("tło strony.jpg")';
+            startSlideshow();
         }
+
+        let images = ['strona główna/1.jpg', 'strona główna/2.jpg', 'strona główna/3.jpg', 'strona główna/4.jpg']; // zamień na swoje ścieżki do zdjęć
+        let currentIndex = 0;
+
+        function startSlideshow() {
+            setInterval(() => {
+                document.body.style.backgroundImage = `url('${images[currentIndex]}')`;
+                currentIndex = (currentIndex + 1) % images.length;
+            }, 6000);
+        }
+        
+        window.onload = startSlideshow; // Rozpocznij pokaz slajdów po załadowaniu strony
     </script>
 </head>
 <body>
