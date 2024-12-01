@@ -24,7 +24,7 @@
             padding: 10px 0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        #produkt1, #produkt2, #produkt3 {
+        #produkt1, #produkt2, #produkt3, #produkt4 {
             display: none;
             width: 100%;
             height: calc(100vh - 60px); /* Adjust height to account for header */
@@ -76,6 +76,7 @@
             <li><a href="#" onclick="showProduct('produkt1')">Film promocyjny</a></li>
             <li><a href="#" onclick="showProduct('produkt2')">Zdjęcie 360°</a></li>
             <li><a href="#" onclick="showProduct('produkt3')">Model 3D</a></li>
+            <li><a href="#" onclick="showProduct('produkt4')">Mapa</a></li> <!-- Nowa pozycja menu -->
         </ul>
     </header>
 
@@ -90,6 +91,9 @@
     <div id="produkt3">
         <iframe src="https://app.vectary.com/p/7GvUmIfX2flcTFcSKQbW20" frameborder="0" width="100%" height="100%" allow="xr-spatial-tracking; fullscreen;"></iframe>
     </div>
+
+    <div id="produkt4">
+        <iframe src="mapa/index.html" frameborder="0" width="100%" height="100%" allow="xr-spatial-tracking; fullscreen;"></iframe> <!-- Nowy produkt Mapa -->
+    </div>
 </body>
 </html>
-
